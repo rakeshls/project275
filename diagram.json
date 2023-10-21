@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "author": "Niyati Singh",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 87, "left": -48.6, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -36,
+      "left": 30.6,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-ir-receiver", "id": "ir1", "top": -39.75, "left": 103.82, "attrs": {} },
+    { "type": "wokwi-ir-remote", "id": "remote1", "top": -19.2, "left": 249.6, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:GND.1", "bz1:1", "black", [ "v0" ] ],
+    [ "bz1:2", "uno:10", "green", [ "h18.8", "v48" ] ],
+    [ "ir1:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "ir1:GND", "uno:GND.2", "black", [ "v0" ] ],
+    [ "ir1:DAT", "uno:8", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
